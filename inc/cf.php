@@ -295,7 +295,7 @@ if( class_exists( 'CSF' ) ) {
 
   //
   // Set a unique slug-like ID
-  $prefix = 'my_framework';
+  $prefix = 'my_theme_optinos';
 
   //
   // Create options
@@ -319,6 +319,7 @@ if( class_exists( 'CSF' ) ) {
         'id'    => 'disply_tag_on',
         'type'  => 'switcher',
         'title' => 'Disply tag',
+        'default' =>0,
       ),
 
       array(

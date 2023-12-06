@@ -54,9 +54,12 @@
   </div>
 
 <?php 
- $philosopy_desply_tag = get_option( 'disply_tag_on' );
+ $philosopy_get_theme_options = get_option( 'my_theme_optinos' );
 
- if ($philosopy_desply_tag) :
+ $philosopy_disply_tag = $philosopy_get_theme_options['disply_tag_on'];
+
+
+ if ($philosopy_disply_tag) :
   # code...
  
 ?>
@@ -132,6 +135,23 @@
             <input type="submit" name="subscribe" value="Send">
             <label for="mc-email" class="subscribe-message"></label>
           </form>
+        </div>
+        <div>
+
+        <?php 
+        $philosopy_facebook_link =$philosopy_get_theme_options['socil_facebook'];
+        if ($philosopy_facebook_link) {
+          echo '<a href="' . $philosopy_facebook_link . '"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
+        }
+
+
+        $philosopy_x_link =$philosopy_get_theme_options['socil_x'];
+        if ($philosopy_x_link) {
+          echo '<a href="' . $philosopy_x_link . '"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
+        }
+        ?>
+
+        
         </div>
       </div>
     </div>
