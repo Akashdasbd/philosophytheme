@@ -290,3 +290,69 @@ if( class_exists( 'CSF' ) ) {
 }
 
 
+// Control core classes for avoid errors
+if( class_exists( 'CSF' ) ) {
+
+  //
+  // Set a unique slug-like ID
+  $prefix = 'my_framework';
+
+  //
+  // Create options
+  CSF::createOptions( $prefix, array(
+    'menu_title' => 'My Framework',
+    'menu_slug'  => 'my-framework',
+    'menu_icon'  => 'dashicons-cover-image',
+    'menu_position' =>40,
+    
+  ) );
+
+  //
+  // Create a section
+  CSF::createSection( $prefix, array(
+    'title'  => 'Footer ariay',
+    'fields' => array(
+
+      //
+      // A text field
+      array(
+        'id'    => 'opt-switcher-1',
+        'type'  => 'switcher',
+        'title' => 'Disply tag',
+      ),
+
+      array(
+        'id'      => 'socil_facebook',
+        'type'    => 'text',
+        'title'   => 'Facebook link',
+      ),
+
+      array(
+        'id'      => 'socil_x',
+        'type'    => 'text',
+        'title'   => 'X link',
+      ),
+
+    )
+  ) );
+
+  //
+  // Create a section
+  CSF::createSection( $prefix, array(
+    'title'  => 'Tab Title 2',
+    'fields' => array(
+
+      // A textarea field
+      array(
+        'id'    => 'opt-textarea',
+        'type'  => 'textarea',
+        'title' => 'Simple Textarea',
+      ),
+
+    )
+  ) );
+
+}
+
+
+
