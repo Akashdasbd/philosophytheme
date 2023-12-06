@@ -316,7 +316,7 @@ if( class_exists( 'CSF' ) ) {
       //
       // A text field
       array(
-        'id'    => 'opt-switcher-1',
+        'id'    => 'disply_tag_on',
         'type'  => 'switcher',
         'title' => 'Disply tag',
       ),

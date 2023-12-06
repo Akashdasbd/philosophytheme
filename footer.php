@@ -52,6 +52,14 @@
       </ul>
     </div>
   </div>
+
+<?php 
+ $philosopy_desply_tag = get_option( 'disply_tag_on' );
+
+ if ($philosopy_desply_tag) :
+  # code...
+ 
+?>
   <div class="row bottom tags-wrap">
     <div class="col-full tags">
       <?php 
@@ -72,6 +80,10 @@
     </div>
 
   </div>
+
+  <?php endif; ?>
+
+
 </section>
 
 <footer class="s-footer">
