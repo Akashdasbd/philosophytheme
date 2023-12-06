@@ -147,7 +147,7 @@
 
         $philosopy_x_link =$philosopy_get_theme_options['socil_x'];
         if ($philosopy_x_link) {
-          echo '<a href="' . $philosopy_x_link . '"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
+          echo '<a href="' . $philosopy_x_link . '"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
         }
         ?>
 

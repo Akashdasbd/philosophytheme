@@ -334,6 +334,9 @@ if( class_exists( 'CSF' ) ) {
         'title'   => 'X link',
       ),
 
+
+      
+
     )
   ) );
 
@@ -352,6 +355,87 @@ if( class_exists( 'CSF' ) ) {
 
     )
   ) );
+
+
+
+// Control core classes for avoid errors
+if( class_exists( 'CSF' ) ) {
+
+  //
+  // Set a unique slug-like ID
+  $prefix = 'my_post_options_for_post';
+
+  //
+  // Create a metabox
+  CSF::createMetabox( $prefix, array(
+    'title'     => 'My Post Options',
+    'post_type' => 'post',
+  ) );
+
+  //
+  // Create a section
+  CSF::createSection( $prefix, array(
+    'title'  => 'Tab Title 1',
+    'fields' => array(
+
+      //
+      // A text field
+
+      array(
+        'id'        => 'opt-group-1-me',
+        'type'      => 'group',
+        'title'     => 'Group',
+        'fields'    => array(
+          array(
+            'id'    => 'opt-text',
+            'type'  => 'text',
+            'title' => 'Text',
+          ),
+          array(
+            'id'    => 'opt-media-1',
+            'type'  => 'media',
+            'title' => 'Media',
+          ),
+          array(
+            'id'          => 'opt-select-10',
+            'type'        => 'select',
+            'title'       => 'Select with book',
+            'placeholder' => 'Select a book',
+            'options'     => 'post',
+            'query_args'  => array(
+              'posts_per_page' => -1 ,
+              'post_type' => 'book',
+            )
+          ),
+
+          array(
+            'id'           => 'opt-sorter-1',
+            'type'         => 'sorter',
+            'title'        => 'Sorter',
+            'default'      => array(
+              'enabled'    => array(
+                'option-1' => 'Option 1',
+                'option-2' => 'Option 2',
+                'option-3' => 'Option 3',
+              ),
+              'disabled'   => array(
+                'option-4' => 'Option 4',
+                'option-5' => 'Option 5',
+              ),
+            ),
+          ),
+          
+
+        ),
+      ),
+      
+
+    )
+  ) );
+
+
+}
+
 
 }
 
